@@ -10,9 +10,10 @@ package meuiterator;
  * @author aluno
  */
 public class Aluno {
-    public Aluno(String nome, char sexo) {
+    public Aluno(String nome, char sexo, Integer idade) {
         setNome(nome);
         setSexo(sexo);
+        setIdade(idade);
     }
     /**
      * @return the nome
@@ -42,6 +43,15 @@ public class Aluno {
         this.sexo = sexo;
     }
 
+    public Integer getIdade() {
+        return idade;
+    }
+
+    public void setIdade(Integer idade) {
+        this.idade = idade;
+    }
+
     private String nome;
     private char sexo;
+    private Integer idade;
 }

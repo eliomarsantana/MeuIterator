@@ -26,16 +26,20 @@ public class MeuIterator {
      */
     public static void main(String[] args) {
         ArrayList<Aluno> lista = new ArrayList<>();
-        lista.add(new Aluno("JOAO", 'M'));
-        lista.add(new Aluno("MARIA", 'F'));
-        lista.add(new Aluno("ZECA", 'M'));
-        lista.add(new Aluno("JOANA", 'F'));
-        lista.add(new Aluno("HUGUINHO", 'M'));
-        lista.add(new Aluno("ZEZINHO", 'M'));
-        lista.add(new Aluno("LUIZINHO", 'M'));
-        IteratorByGenre i = new IteratorByGenre(lista, 'F');
+        lista.add(new Aluno("JOAO", 'M', 20));
+        lista.add(new Aluno("MARIA", 'F', 35));
+        lista.add(new Aluno("ZECA", 'M', 30));
+        lista.add(new Aluno("JOANA", 'F', 29));
+        lista.add(new Aluno("HUGUINHO", 'M', 20));
+        lista.add(new Aluno("ZEZINHO", 'M', 42));
+        lista.add(new Aluno("LUIZINHO", 'M', 16));
+        //IteratorByGenre i = new IteratorByGenre(lista, 'F');
         percorrerLista(lista.iterator());
+        
+        IteratorGenericPower i = new IteratorGenericPower(lista, "idade", "df", 20);
         System.out.println("");
-        percorrerLista(i);
+        System.out.println("Filtro com IteratorGenericPower: ");
+       
+        percorrerLista(i);    
     }
 }
