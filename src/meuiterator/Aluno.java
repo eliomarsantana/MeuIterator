@@ -1,44 +1,29 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package meuiterator;
 
 /**
  *
- * @author aluno
+ * @author Eliomar Santana
  */
 public class Aluno {
-    public Aluno(String nome, char sexo, Integer idade) {
+    public Aluno(String nome, char sexo, Integer idade, Integer anoIngresso) {
         setNome(nome);
         setSexo(sexo);
         setIdade(idade);
+        setAnoIngresso(anoIngresso);
     }
-    /**
-     * @return the nome
-     */
+
     public String getNome() {
         return nome;
     }
-
-    /**
-     * @param nome the nome to set
-     */
+    
     public void setNome(String nome) {
         this.nome = nome;
     }
-    
-    /**
-     * @return the sexo
-     */
+
     public char getSexo() {
         return sexo;
     }
 
-    /**
-     * @param sexo the sexo to set
-     */
     public void setSexo(char sexo) {
         this.sexo = sexo;
     }
@@ -51,7 +36,16 @@ public class Aluno {
         this.idade = idade;
     }
 
+    public Integer getAnoIngresso() {
+        return anoIngresso;
+    }
+
+    public void setAnoIngresso(Integer anoIngresso) {
+        this.anoIngresso = anoIngresso;
+    }
+    
     private String nome;
     private char sexo;
     private Integer idade;
+    private Integer anoIngresso;
 }
